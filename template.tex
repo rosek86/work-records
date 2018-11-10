@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[table]{xcolor}
+\usepackage{array,multirow,graphicx}
+\usepackage{float}
+\usepackage{rotating}
+
+\definecolor{Red}{rgb}{1,0.4,0.4}
+\definecolor{Green}{rgb}{0.4,1,0.4}
+\definecolor{White}{rgb}{1,1,1}
+\setlength{\arrayrulewidth}{0.8pt}
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}
+<<TITLE>>
+\end{center}
+
+\begin{center}
+  \begin{tabular}[c]{C{5cm} C{5cm}}
+    rok: & <<YEAR>> \\
+    miesiąc: & <<MONTH>> \\
+    & \\
+    <<TOP_TABLE_ROWS>>
+  \end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}[c]{|C{1cm}|C{1cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+  \hline \multicolumn{6}{|c|}{<<EMPLOYEE>>} \\
+
+  \hline & & \multicolumn{2}{ c| }{godz. pracy} & ilość godzin & \\
+
+  \cline{3-5}
+  \multirow{-2}{*}{
+    \raisebox{0pt}[0pt][0pt]{
+      \rotatebox[origin=c]{90}{
+        Dzień miesiąca
+      }
+    }
+  }
+  &
+  \multirow{-2}{*}{
+    \raisebox{0pt}[0pt][0pt]{
+      \rotatebox[origin=c]{90}{
+        Dzień tygodnia
+      }
+    }
+  }
+  & od & do & \rotatebox{90}{\parbox[c][][c]{6em}{lub \\ rodzaj \\ nieobecności}} & \multirow{-2}{*}{podpis} \\
+
+  <<DAYS>>
+
+  \hline \multicolumn{4}{ |l| }{Ilość przepracowanych godzin:} & & \\
+  \hline \multicolumn{4}{ |l| }{Ilość nieprzepracowanych godzin:} & & \\
+  \hline \multicolumn{4}{ |l| }{Ilość godzin razem:} & & \\
+  \hline
+\end{tabular}
+
+\end{center}
+\end{document}

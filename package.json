@@ -1,0 +1,21 @@
+{
+  "name": "work-records-generator",
+  "version": "1.0.0",
+  "description": "Generate work records",
+  "main": "generate.js",
+  "dependencies": {
+    "ical": "^0.5.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.21",
+    "node-fetch": "^2.1.2",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krzysztof Rosinski",
+  "license": "ISC"
+}
